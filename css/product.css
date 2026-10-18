@@ -737,7 +737,7 @@
   margin: auto 0 5px;
   list-style: none;
   color: #a49a9a;
-  font-size: 18px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -754,6 +754,7 @@
   background: transparent;
   font: inherit;
   white-space: nowrap;
+  letter-spacing: inherit;
   text-transform: inherit;
 }
 
@@ -812,8 +813,9 @@
   display: block;
   margin-bottom: 6px;
   color: #a29b9b;
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 19.5px;
+  letter-spacing: .04em;
   text-transform: uppercase;
 }
 
@@ -832,7 +834,8 @@
   color: var(--foreground);
   background: #101010;
   font: inherit;
-  font-size: 20px;
+  font-size: 15px;
+  line-height: 29px;
   transition: border-color 180ms, background 180ms;
 }
 
@@ -843,7 +846,8 @@
 
 .form-field textarea {
   resize: vertical;
-  line-height: 1.5;
+  /* Preserve the existing row heights when the text size changes. */
+  line-height: 30px;
 }
 
 .form-field select {
@@ -898,7 +902,7 @@
   justify-content: center;
   border: 1px solid #3c3737;
   color: #c6bfbf;
-  font-size: 20px;
+  font-size: 13px;
   text-transform: uppercase;
   cursor: pointer;
   transition: color 180ms, border-color 180ms, background 180ms;
@@ -971,6 +975,8 @@
   justify-content: center;
   align-items: center;
   min-height: 50px;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .form-back {
@@ -1154,16 +1160,15 @@
 @media (min-width: 1201px) {
   .inquiry-intro {
     width: 700px;
-    max-width: none;
+    max-width: calc(100% + 50px);
     font-size: 23px;
   }
   .inquiry-steps {
-    font-size: 23px;
+    line-height: clamp(26.1px, 2.32vw, 33.35px);
     gap: 18px;
   }
   .form-field label, .deployment-options > legend {
-    font-size: 16px;
-    line-height: 1.25;
+    line-height: 20px;
     margin-bottom: 6px;
   }
   .inquiry-section {
@@ -1223,7 +1228,6 @@
   }
   .inquiry-steps {
     gap: 12px;
-    font-size: 13px;
   }
   .inquiry-intro {
     font-size: 19px;
@@ -1233,9 +1237,6 @@
   }
   .deployment-option-grid {
     gap: 8px;
-  }
-  .deployment-option-grid span {
-    font-size: 12px;
   }
   .conditional-fields {
     padding-left: 22px;
@@ -1396,7 +1397,6 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 12px 18px;
-    font-size: 12px;
   }
   .inquiry-intro {
     font-size: 17px;
@@ -1408,11 +1408,14 @@
     min-height: 480px;
   }
   .form-field input, .form-field textarea, .form-field select {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 20.3px;
     padding: 14px 12px;
   }
+  .form-field textarea {
+    line-height: 21px;
+  }
   .deployment-option-grid span {
-    font-size: 10px;
     min-height: 52px;
   }
   .conditional-fields {
@@ -1421,12 +1424,10 @@
   }
   .form-field label, .deployment-options > legend {
     font-size: 11px;
+    line-height: 16.5px;
   }
   .form-actions {
     gap: 14px;
-  }
-  .form-actions > .button {
-    font-size: 11px;
   }
   .form-context {
     font-size: 12px;
@@ -1727,7 +1728,6 @@
     justify-content: space-between;
     margin: 34px 0 0;
     gap: 8px;
-    font-size: clamp(8px, 2.25vw, 12px);
   }
   .inquiry-steps li {
     gap: 3px;
@@ -1746,12 +1746,16 @@
     font-size: 21px;
     margin-bottom: 24px;
   }
-  .form-field label, .deployment-options > legend {
-    font-size: 11px;
-  }
   .form-field input, .form-field textarea, .form-field select {
     min-height: 52px;
-    font-size: 15px;
+    line-height: 21.75px;
+  }
+  .form-field textarea {
+    line-height: 22.5px;
+  }
+  .form-field select {
+    /* Native selects use font metrics instead of the specified line-height. */
+    font-size-adjust: .51;
   }
   .form-field {
     margin-bottom: 21px;
@@ -1760,21 +1764,18 @@
     gap: 9px;
   }
   .deployment-option-grid span {
-    font-size: 11px;
     min-height: 54px;
   }
   .conditional-fields {
     border-left-width: 6px;
     padding-left: 17px;
   }
-  .form-actions > .button {
-    font-size: 11px;
-  }
   .form-back {
     font-size: 12px;
   }
   .form-context {
-    font-size: 13px;
+    line-height: 22.1px;
+    letter-spacing: .04em;
   }
   .inquiry-complete h3 {
     font-size: 32px;
@@ -1833,8 +1834,8 @@
   .deployment-option-grid {
     gap: 6px;
   }
-  .deployment-option-grid span {
-    font-size: 9px;
+  .inquiry-steps {
+    letter-spacing: -.065em;
   }
   .conditional-fields {
     padding-left: 12px;
@@ -1879,9 +1880,6 @@
     fill: #d8d4d4;
     font: 16px var(--font);
     text-anchor: middle;
-  }
-  .inquiry-steps {
-    font-size: 10px;
   }
 }
 

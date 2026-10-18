@@ -112,7 +112,7 @@ No public deployment is performed by creating these files.
 
 Before publishing or after changing the site, inspect both pages at 1440, 1024, 768, 390, and 320 CSS pixels. Check for horizontal overflow, clipped type, diagram readability, broken images, and layout shifts. Exercise the mobile menu, links, all dashboard tabs, every site selection, the dialog, and all three inquiry paths using both pointer and keyboard. Check required-field and email validation, data preservation between steps, the final demo message, reduced motion, JavaScript-disabled fallbacks, and the browser console.
 
-The completed implementation passed **84 browser checks** in local Chromium, including all five viewport widths, keyboard interactions, all three inquiry paths, reduced motion, JavaScript-disabled visibility, image loading, and link targets. See [the QA report](docs/qa-report.md) for the scope and limitations. There is no installed test framework or test dependency; the checklist above is provided for future maintenance.
+The completed implementation passed **87 browser checks** in local Chromium, including all five viewport widths, keyboard interactions, all three inquiry paths, reduced motion, JavaScript-disabled visibility, image loading, and link targets. Additional desktop-breakpoint checks confirmed that the inquiry columns and progress controls fit. See [the QA report](docs/qa-report.md) for the scope and limitations. There is no installed test framework or test dependency; the checklist above is provided for future maintenance.
 
 ## Demo limitations
 
