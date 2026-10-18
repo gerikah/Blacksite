@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 450" fill="none">
+  <defs><pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" stroke="#252a2b" stroke-width=".7"/></pattern></defs>
+  <path fill="#0b0e0f" stroke="#42484a" d="M.5.5h359v449H.5z"/><path fill="url(#g)" d="M1 1h358v448H1z"/>
+  <g font-family="Courier New,monospace" font-size="13" fill="#b2b8bb"><text x="20" y="29">FIG 02 — INFRASTRUCTURE</text><text x="20" y="66">EDGE / FOUR FACILITIES</text><text x="20" y="210">TRANSPORT</text><text x="20" y="350">MONITORING CORE</text></g>
+  <g stroke="#e4e3e3" stroke-width="1.5"><path d="M55 125v41h55v64M137 125v28h-27v77M219 125v41h31v64M301 125v28h-51v77M110 278v39h70v49"/></g>
+  <g stroke="#ff4b00" stroke-width="1.8" stroke-dasharray="5 4"><path d="M55 125v57h195v48M301 125v57H110v48M250 278v54h-70v34"/></g>
+  <g fill="#0b0e0f" stroke="#a9b0b4" stroke-width="1.5"><path d="M20 85h70v40H20zM102 85h70v40h-70zM184 85h70v40h-70zM266 85h70v40h-70zM48 230h124v48H48zM188 230h124v48H188z"/><path stroke="#e4e3e3" d="M90 366h180v56H90z"/></g>
+  <g font-family="Courier New,monospace" font-size="14" text-anchor="middle" fill="#eee"><text x="55" y="110">SITE-A</text><text x="137" y="110">SITE-B</text><text x="219" y="110">SITE-C</text><text x="301" y="110">SITE-D</text><text x="110" y="259">GATEWAY 1</text><text x="250" y="259">GATEWAY 2</text><text x="180" y="389" font-weight="700">NODE-01 CORE</text><text x="180" y="409" font-size="12" fill="#a9b0b4">Monitoring + alert</text></g>
+  <text x="20" y="299" font-family="Courier New,monospace" font-size="12" fill="#eee">SOLID / PRIMARY</text><text x="205" y="299" font-family="Courier New,monospace" font-size="12" fill="#ff4b00">DASHED / BACKUP</text>
+</svg>

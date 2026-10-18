@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore NODE-01, BLACKSITE’s fictional infrastructure monitoring platform. Inspect sample site status, network topology, and incident events.">
+  <meta name="theme-color" content="#101010">
+  <title>NODE-01 — BLACKSITE</title>
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/open-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/product.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/product.js" defer></script>
+</head>
+<body class="product-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="BLACKSITE home"><img src="assets/logo.png" alt="" width="44" height="44"><span>BLACKSITE</span></a>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false"><span>Menu</span><span class="menu-icon" aria-hidden="true"></span></button>
+      <nav class="site-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="index.html#problem">Problem</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="node-01.html" aria-current="page">NODE-01</a>
+        <a class="button button-small" href="#inquiry">Request Brief</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="product-hero container" aria-labelledby="product-title">
+      <div class="product-kicker"><p class="eyebrow">Product / 001</p><p class="eyebrow">System details</p></div>
+      <div class="product-hero-copy reveal">
+        <h1 class="product-title" id="product-title" aria-label="NODE-01"><span class="product-title-word" aria-hidden="true">NODE</span><span class="product-title-code" aria-hidden="true"><span class="product-title-dash"></span><span>01</span></span></h1>
+        <p class="product-hero-description">Monitor critical sites through one unified<br class="desktop-break"> interface.</p>
+        <a class="button product-brief-button" href="#inquiry">Request technical brief</a>
+      </div>
+
+      <div class="dashboard reveal" aria-labelledby="dashboard-title">
+        <h2 class="visually-hidden" id="dashboard-title">NODE-01 illustrative system preview</h2>
+        <div class="dashboard-toolbar">
+          <div class="dashboard-tabs" role="tablist" aria-label="System preview" aria-orientation="horizontal">
+            <button class="dashboard-tab" type="button" role="tab" id="status-tab" aria-controls="status-panel" aria-selected="true" tabindex="0">Status</button>
+            <button class="dashboard-tab" type="button" role="tab" id="topology-tab" aria-controls="topology-panel" aria-selected="false" tabindex="-1">Topology</button>
+            <button class="dashboard-tab" type="button" role="tab" id="events-tab" aria-controls="events-panel" aria-selected="false" tabindex="-1">Events</button>
+          </div>
+          <span class="dashboard-demo-label">Illustrative preview</span>
+        </div>
+
+        <div class="dashboard-panel" id="status-panel" role="tabpanel" aria-labelledby="status-tab" tabindex="0">
+          <div class="facility-grid">
+            <article class="facility-status"><h3>Site-A <span>·</span> North Relay</h3><p class="state state-nominal"><span aria-hidden="true"></span>Nominal</p></article>
+            <article class="facility-status"><h3>Site-B <span>·</span> Data Hall</h3><p class="state state-nominal"><span aria-hidden="true"></span>Nominal</p></article>
+            <article class="facility-status"><h3>Site-C <span>·</span> Substation</h3><p class="state state-failover"><span aria-hidden="true"></span>Failover</p></article>
+            <article class="facility-status"><h3>Site-D <span>·</span> Remote Depot</h3><p class="state state-offline"><span aria-hidden="true"></span>Offline</p></article>
+          </div>
+          <div class="dashboard-bottom">
+            <figure class="link-health">
+              <figcaption>Link health <span>Sample · 24 hours</span></figcaption>
+              <svg viewBox="0 0 600 220" role="img" aria-labelledby="health-chart-title health-chart-description" preserveAspectRatio="none">
+                <title id="health-chart-title">Sample link health over 24 hours</title>
+                <desc id="health-chart-description">Availability is mostly high, with a brief interruption at Site C before traffic recovers over the backup route. These are illustrative values.</desc>
+                <g fill="currentColor"><rect x="0" y="68" width="26" height="152"/><rect x="44" y="38" width="26" height="182"/><rect x="88" y="68" width="26" height="152"/><rect x="132" y="52" width="26" height="168"/><rect x="176" y="80" width="26" height="140"/><rect x="220" y="68" width="26" height="152"/><rect x="264" y="52" width="26" height="168"/><rect x="308" y="30" width="26" height="190"/><rect x="352" y="52" width="26" height="168"/><rect x="396" y="38" width="26" height="182"/><rect x="440" y="160" width="26" height="60" fill="#ff3b00"/><rect x="484" y="60" width="26" height="160"/><rect x="528" y="38" width="26" height="182"/><rect x="572" y="42" width="26" height="178"/></g>
+              </svg>
+            </figure>
+            <div class="recent-events"><div class="dashboard-heading"><h3>Recent events</h3><span>All sites</span></div><ol class="event-list"><li><span>Primary link lost</span><span class="event-alert">Site C · 12:04</span></li><li><span>Failover engaged</span><span>Site C · 12:04</span></li><li><span>Heartbeat missed</span><span>Site D · 11:48</span></li></ol></div>
+          </div>
+        </div>
+
+        <div class="dashboard-panel dashboard-topology-panel" id="topology-panel" role="tabpanel" aria-labelledby="topology-tab" tabindex="0" hidden>
+          <div class="preview-topology-heading"><h3>Network topology</h3><p>Illustrative network · 4 sites / 2 gateways</p></div>
+          <svg class="preview-topology preview-topology-desktop" viewBox="0 0 1000 270" role="img" aria-labelledby="preview-topology-title preview-topology-desc">
+            <title id="preview-topology-title">Sample NODE-01 network topology</title><desc id="preview-topology-desc">NODE-01 connects through Gateway 1 to nominal sites A and B, and through Gateway 2 to Site C on failover and Site D offline.</desc>
+            <g fill="none" stroke="#6a6c6d" stroke-width="2"><path d="M500 58V90H260V130M500 90H740V130M260 170V196H140V222M260 196H380V222M740 170V196H860V222"/><path class="topology-backup-path" d="M740 170V196H620V222" stroke="#ff3b00" stroke-dasharray="7 5"/></g>
+            <g class="preview-topology-box"><rect x="430" y="13" width="140" height="45"/><rect x="190" y="130" width="140" height="40"/><rect x="670" y="130" width="140" height="40"/></g>
+            <g class="preview-topology-label"><text x="500" y="42">NODE-01</text><text x="260" y="156">GATEWAY 1</text><text x="740" y="156">GATEWAY 2</text><text x="140" y="247">SITE-A</text><text x="380" y="247">SITE-B</text><text class="preview-orange" x="620" y="247">SITE-C</text><text class="preview-offline" x="860" y="247">SITE-D</text></g>
+            <g><circle cx="140" cy="222" r="5" fill="#36c65b"/><circle cx="380" cy="222" r="5" fill="#36c65b"/><circle cx="620" cy="222" r="5" fill="#ff3b00"/><circle cx="860" cy="222" r="5" fill="#979797"/></g>
+          </svg>
+          <svg class="preview-topology-mobile" viewBox="0 0 360 320" role="img" aria-labelledby="mobile-topology-title mobile-topology-desc">
+            <title id="mobile-topology-title">Sample network topology</title><desc id="mobile-topology-desc">NODE-01 connects to two gateways. Sites A and B are nominal, Site C is using failover, and Site D is offline.</desc>
+            <g fill="none" stroke="#6a6c6d" stroke-width="2"><path d="M180 52V75H95V100M180 75H265V100M95 140V190H45V235M95 190H125V235M265 140V190H315V235"/><path d="M265 140V190H235V235" stroke="#ff3b00" stroke-dasharray="6 4"/></g>
+            <g class="preview-topology-box"><rect x="125" y="10" width="110" height="42"/><rect x="40" y="100" width="110" height="40"/><rect x="210" y="100" width="110" height="40"/></g>
+            <g class="mobile-topology-label"><text x="180" y="37">NODE-01</text><text x="95" y="126">GATEWAY 1</text><text x="265" y="126">GATEWAY 2</text><text x="45" y="270">SITE-A</text><text x="125" y="270">SITE-B</text><text x="235" y="270" fill="#ff3b00">SITE-C</text><text x="315" y="270">SITE-D</text><text x="45" y="296" fill="#a4a2a2">NOMINAL</text><text x="125" y="296" fill="#a4a2a2">NOMINAL</text><text x="235" y="296" fill="#ff3b00">FAILOVER</text><text x="315" y="296" fill="#979797">OFFLINE</text></g>
+            <circle cx="45" cy="235" r="6" fill="#36c65b"/><circle cx="125" cy="235" r="6" fill="#36c65b"/><circle cx="235" cy="235" r="6" fill="#ff3b00"/><circle cx="315" cy="235" r="6" fill="#979797"/>
+          </svg>
+          <p class="topology-preview-caption">Site C is using its secondary path. Site D has missed its last scheduled heartbeat.</p>
+        </div>
+
+        <div class="dashboard-panel expanded-events" id="events-panel" role="tabpanel" aria-labelledby="events-tab" tabindex="0" hidden>
+          <div class="preview-topology-heading"><h3>Incident timeline</h3><p>Illustrative events · 18 Oct 2026 · UTC</p></div>
+          <ol class="expanded-event-list">
+            <li><time datetime="2026-10-18T12:04:11Z">12:04:11</time><span class="event-site event-alert">Site C</span><div><strong>Secondary route confirmed</strong><p>Gateway 2 is carrying buffered signals over the backup uplink.</p></div><span class="event-type">Failover</span></li>
+            <li><time datetime="2026-10-18T12:04:08Z">12:04:08</time><span class="event-site event-alert">Site C</span><div><strong>Primary link lost</strong><p>Related link alerts grouped into incident INC-0042.</p></div><span class="event-type">Incident</span></li>
+            <li><time datetime="2026-10-18T11:48:06Z">11:48:06</time><span class="event-site">Site D</span><div><strong>Heartbeat missed</strong><p>Remote Depot is offline. Its last received signals remain available.</p></div><span class="event-type">Offline</span></li>
+            <li><time datetime="2026-10-18T11:32:00Z">11:32:00</time><span class="event-site">Site B</span><div><strong>Scheduled health check passed</strong><p>Data Hall reported normal device and network availability.</p></div><span class="event-type">Nominal</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="monitor-section" aria-labelledby="monitor-title">
+      <div class="container monitor-heading reveal"><p class="eyebrow">02 / How it works</p><h2 class="section-title" id="monitor-title">What it monitors<br>and why it matters</h2></div>
+      <div class="product-editorial-rows">
+        <article class="product-editorial-row"><div class="container product-row-inner"><div><p class="feature-label">Site status</p><h3>Health of every facility</h3></div><p>Problems surface at the site they start, before they reach operations.</p></div></article>
+        <article class="product-editorial-row"><div class="container product-row-inner"><div><p class="feature-label">Network links</p><h3>Paths and failover</h3></div><p>Know which route is carrying traffic, and what takes over when it fails.</p></div></article>
+        <article class="product-editorial-row"><div class="container product-row-inner"><div><p class="feature-label">Events</p><h3>One incident timeline</h3></div><p>Related signals grouped, so responders start with the cause.</p></div></article>
+        <article class="product-editorial-row"><div class="container product-row-inner"><div><p class="feature-label">Access</p><h3>Who did what</h3></div><p>Every change and acknowledgement recorded for review.</p></div></article>
+      </div>
+    </section>
+
+    <section class="inspector-section container" aria-labelledby="inspect-title">
+      <div class="reveal"><p class="eyebrow">02 / Schematic</p><h2 class="section-title" id="inspect-title">Inspect<br>any node.</h2></div>
+      <div class="node-inspector reveal">
+        <div class="node-diagram-wrap">
+          <svg class="node-diagram" viewBox="0 0 740 530" role="group" aria-labelledby="inspector-diagram-title inspector-diagram-desc">
+            <title id="inspector-diagram-title">Inspect the NODE-01 sample network</title><desc id="inspector-diagram-desc">Select Site A, B, C, or D to inspect its status. Site C is selected initially. Use Tab to reach each site and Enter or Space to select it.</desc>
+            <defs><pattern id="node-grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#202627" stroke-width="1"/></pattern></defs>
+            <rect class="diagram-background" width="740" height="530" fill="url(#node-grid)"/>
+            <g class="diagram-paths"><path data-gateway="1" d="M368 141L196 278"/><path class="is-selected" data-gateway="2" d="M368 141L562 278"/><path data-site-path="A" d="M196 278L94 435"/><path data-site-path="B" d="M196 278L278 435"/><path data-site-path="C" class="is-selected" d="M562 278L460 435"/><path data-site-path="D" d="M562 278L658 435"/></g>
+            <g class="diagram-static-node"><rect x="321" y="73" width="94" height="72"/><text x="368" y="57">NODE-01</text><rect x="166" y="249" width="60" height="59"/><text x="196" y="232">GW-1</text><rect x="532" y="249" width="60" height="59"/><text x="562" y="232">GW-2</text></g>
+            <g class="diagram-site" data-site="A" role="button" tabindex="0" aria-label="Inspect Site A, North Relay, nominal" aria-pressed="false"><rect class="diagram-site-hit" x="44" y="390" width="100" height="104"/><rect class="diagram-selection-ring" x="54" y="395" width="80" height="80"/><rect class="diagram-site-box" x="67" y="408" width="54" height="54"/><text x="94" y="492">SITE-A</text></g>
+            <g class="diagram-site" data-site="B" role="button" tabindex="0" aria-label="Inspect Site B, Data Hall, nominal" aria-pressed="false"><rect class="diagram-site-hit" x="228" y="390" width="100" height="104"/><rect class="diagram-selection-ring" x="238" y="395" width="80" height="80"/><rect class="diagram-site-box" x="251" y="408" width="54" height="54"/><text x="278" y="492">SITE-B</text></g>
+            <g class="diagram-site is-selected" data-site="C" role="button" tabindex="0" aria-label="Inspect Site C, Substation, failover active" aria-pressed="true"><rect class="diagram-site-hit" x="410" y="390" width="100" height="104"/><rect class="diagram-selection-ring" x="420" y="395" width="80" height="80"/><rect class="diagram-site-box" x="433" y="408" width="54" height="54"/><text x="460" y="492">SITE-C</text></g>
+            <g class="diagram-site" data-site="D" role="button" tabindex="0" aria-label="Inspect Site D, Remote Depot, offline" aria-pressed="false"><rect class="diagram-site-hit" x="608" y="390" width="100" height="104"/><rect class="diagram-selection-ring" x="618" y="395" width="80" height="80"/><rect class="diagram-site-box" x="631" y="408" width="54" height="54"/><text x="658" y="492">SITE-D</text></g>
+          </svg>
+          <p class="diagram-instruction">Select a site to inspect its connection.</p>
+        </div>
+        <div class="node-details">
+          <div class="node-detail-content" aria-live="polite" aria-atomic="true"><p class="feature-label">Selected node</p><h3 id="selected-node-name">Site-C</h3><p class="selected-node-facility" id="selected-node-facility">Substation</p><dl class="node-detail-list"><div><dt>Status</dt><dd id="node-status">Failover active</dd></div><div><dt>Uplink</dt><dd id="node-uplink">Gateway 2</dd></div><div><dt>Last heartbeat</dt><dd id="node-heartbeat">12:04:11 UTC</dd></div><div><dt>Redundancy</dt><dd id="node-redundancy">Secondary path</dd></div><div><dt>Open incidents</dt><dd id="node-incidents">1</dd></div></dl></div>
+          <button class="node-detail-trigger" id="node-detail-trigger" type="button">View node details <span aria-hidden="true">↗</span></button>
+          <noscript><p class="product-noscript">Enable JavaScript to inspect other nodes and open extended details.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="technical-section" aria-labelledby="technical-title">
+      <div class="container"><h2 class="eyebrow" id="technical-title">03 / Technical overview</h2></div>
+      <div class="product-editorial-rows technical-rows">
+        <article class="product-editorial-row"><div class="container product-row-inner"><h3>Deployment</h3><p>On-premise, private cloud, or hybrid, matched to each site.</p></div></article>
+        <article class="product-editorial-row"><div class="container product-row-inner"><h3>Monitoring</h3><p>Edge agents and protocol adapters collect status, link, and device signals.</p></div></article>
+        <article class="product-editorial-row"><div class="container product-row-inner"><h3>Reporting</h3><p>Incident timelines, audit history, and scheduled summaries.</p></div></article>
+        <article class="product-editorial-row"><div class="container product-row-inner"><h3>Integrations</h3><p>API access and alert hand-off to existing operations tooling.</p></div></article>
+      </div>
+    </section>
+
+    <section class="inquiry-section container" id="inquiry" aria-labelledby="inquiry-title">
+      <div class="inquiry-copy reveal"><p class="eyebrow">04 / Request technical brief</p><h2 class="section-title" id="inquiry-title">Tell us<br>about your<br>deployment.</h2><p class="inquiry-intro">Follow-up fields adapt to the deployment type you choose.</p><ol class="inquiry-steps" aria-label="Inquiry progress"><li aria-current="step"><button type="button" data-step-target="0"><span class="step-number">01</span> Organization</button></li><li><button type="button" data-step-target="1"><span class="step-number">02</span> Deployment</button></li><li><button type="button" data-step-target="2"><span class="step-number">03</span> Contact</button></li></ol></div>
+      <div class="inquiry-form-wrap reveal">
+        <form class="inquiry-form" id="inquiry-form">
+          <p class="form-step-count visually-hidden" id="form-step-count" aria-live="polite">Organization, step 1 of 3</p>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <fieldset class="inquiry-step" data-step="0">
+            <legend class="visually-hidden">Organization</legend>
+            <div class="form-field"><label for="organization">Organization name</label><input id="organization" name="organization" type="text" autocomplete="organization" placeholder="Your organization" maxlength="150" required></div>
+          </fieldset>
+          <fieldset class="inquiry-step" data-step="1">
+            <legend class="visually-hidden">Deployment</legend>
+            <fieldset class="deployment-options"><legend>Deployment type</legend><div class="deployment-option-grid"><label><input type="radio" name="deployment" value="single"><span>Single site</span></label><label><input type="radio" name="deployment" value="multi" checked><span>Multi-site</span></label><label><input type="radio" name="deployment" value="hybrid"><span>Hybrid</span></label></div></fieldset>
+            <div class="conditional-fields">
+              <div class="form-field" id="environment-field"><label for="environment">Deployment environment</label><select id="environment" name="environment"><option value="">Choose an environment</option><option value="on-premise-cloud">On-premise + private cloud</option><option value="on-premise-public">On-premise + public cloud</option><option value="mixed">Multiple environments</option></select></div>
+              <div class="form-field" id="sites-field"><label for="sites">Number of sites</label><input id="sites" name="sites" type="number" min="2" max="9999" step="1" inputmode="numeric" placeholder="Approximate range"></div>
+              <div class="form-field"><label for="concerns">Primary monitoring concerns</label><textarea id="concerns" name="concerns" rows="1" placeholder="Visibility, resilience, reporting" maxlength="2000" required></textarea></div>
+            </div>
+            <p class="form-update visually-hidden" id="deployment-update" aria-live="polite"></p>
+          </fieldset>
+          <fieldset class="inquiry-step" data-step="2">
+            <legend class="visually-hidden">Contact</legend>
+            <div class="form-field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="name@organization.com" maxlength="254" required></div>
+            <details class="optional-message"><summary>Add a message <span>(optional)</span></summary><div class="form-field"><label for="message">Additional message</label><textarea id="message" name="message" rows="3" placeholder="Anything else about your deployment" maxlength="3000"></textarea></div></details>
+            <div class="form-actions"><button class="button" type="submit" disabled>Complete demo inquiry</button></div>
+            <p class="form-context">Portfolio demonstration. No information is sent or stored.</p>
+          </fieldset>
+          <noscript><p class="product-noscript">This form needs JavaScript for its progressive steps and demo completion. No information will be sent.</p></noscript>
+        </form>
+        <div class="inquiry-complete" id="inquiry-complete" hidden tabindex="-1"><p class="feature-label">Preview complete</p><h3>Thank you for<br>exploring NODE-01.</h3><p>Demo completed. No information was sent or stored.</p><button class="node-detail-trigger" id="inquiry-restart" type="button">Start again <span aria-hidden="true">↗</span></button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html" aria-label="BLACKSITE home"><img src="assets/logo.png" alt="" width="44" height="44"><span>BLACKSITE</span></a><p>Fictional infrastructure. Real design.<br>A portfolio demonstration. No live telemetry.</p><nav aria-label="Footer navigation"><a href="index.html">Overview</a><a href="node-01.html">NODE-01</a><a href="#inquiry">Request brief</a></nav></div></footer>
+
+  <dialog class="node-modal" id="node-modal" aria-labelledby="node-modal-title" aria-describedby="node-modal-description"><div class="node-modal-header"><p class="feature-label">Illustrative node report</p><button class="modal-close" id="node-modal-close" type="button" aria-label="Close node details" autofocus>×</button></div><h2 id="node-modal-title">Site-C / Substation</h2><p id="node-modal-description">Sample system information. All times are illustrative UTC values.</p><dl class="node-detail-list modal-detail-list" id="modal-node-facts"></dl><div class="node-modal-note"><h3>Incident context</h3><p id="modal-node-context"></p></div><p class="node-modal-footnote">Fictional preview · 18 Oct 2026 · no connected infrastructure</p></dialog>
+</body>
+</html>
+
